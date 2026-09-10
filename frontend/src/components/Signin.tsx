@@ -5,7 +5,7 @@ export default function Signin({onSignin, onSwitchToSignup}){
     const [password, setPassword] = useState("");
 
     async function handleSubmit(){
-        const res = await fetch("http://localhost:3000/signin", {
+        const res = await fetch("http://13.51.207.94:3000/signin", {
             method:"POST",
             headers:{
                 "Content-Type":"application/json",

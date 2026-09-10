@@ -7,7 +7,7 @@ export default function Signup({onSignup, onSwitchToSignin}){
     const [error, setError] = useState("");
 
     async function handleSubmit(){
-        const res = await fetch("http://localhost:3000/signup", {
+        const res = await fetch("http://13.51.207.94:3000/signup", {
             method:"POST",
             headers:{
                 "Content-Type":"application/json",

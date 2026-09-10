@@ -5,7 +5,7 @@ export function Todos({todos,onTodoUpdated}){
     const [description, setDescription] =useState("");
 
     async function addTodo() {
-       const res= await fetch("http://localhost:3000/todo", {
+       const res= await fetch("http://13.51.207.94:3000/todo", {
             method:"POST",
             headers:{
                 "Content-Type":"application/json",
@@ -21,7 +21,7 @@ export function Todos({todos,onTodoUpdated}){
     }
 
     async function deleteTodo(todoId) {
-        await fetch(`http://localhost:3000/todo/${todoId}`, {
+        await fetch(`http://13.51.207.94:3000/todo/${todoId}`, {
             method: "DELETE",
             headers:{
                 "Content-Type":"application/json",
@@ -33,7 +33,7 @@ export function Todos({todos,onTodoUpdated}){
 
 
     async function markCompleted(todo){
-        await fetch(`http://localhost:3000/todo/${todo.id}`,{
+        await fetch(`http://13.51.207.94:3000/todo/${todo.id}`,{
             method:"PUT",
             headers:{
                 "Content-Type":"application/json",

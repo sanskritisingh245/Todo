@@ -13,7 +13,7 @@ export function App() {
   const [ ShowSignup , setShowSignup ] = useState(true);
 
   async function fetchTodo(){
-    const res= await fetch("http://localhost:3000/todo", {
+    const res= await fetch("http://13.51.207.94:3000/todo", {
       method:"GET",
       headers:{
         authorization: localStorage.getItem("token") ?? ""
